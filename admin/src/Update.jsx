@@ -42,9 +42,7 @@ export default function Update({ pizzas, setPizzas }) {
   }
 
   return (
-    <div className="update-form-container">
-      <h2>Update Pizza #{id}</h2>
-
+    //!!
       <form onSubmit={handleSubmit} className="update-form-container">
         <h2>Update Pizza #{id}</h2>
         <div className="form-group">
@@ -93,6 +91,17 @@ export default function Update({ pizzas, setPizzas }) {
             placeholder="Enter picture URL"
           />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="available">Available</label>
+          <input
+            type="checkbox"
+            id="available"
+            name="isAvailable"
+            checked={pizza.isAvailable}
+            onChange={handleChange}
+          />
+        </div>
            
         {pizza.picture && (
           <div>
@@ -136,6 +145,6 @@ export default function Update({ pizzas, setPizzas }) {
           Update Pizza
         </button>
       </form>
-    </div>
+    
   )
 }

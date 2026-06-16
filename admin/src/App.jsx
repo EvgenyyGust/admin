@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   const navigate = useNavigate()
 
-  const defaultPizzas = [
+  const defaultPizzas = [ 
     {
       id: 1,
       name: "Pepperoni",
@@ -48,10 +48,6 @@ function App() {
         <button onClick={() => navigate("/create")}>
           Create
         </button>
-
-        <button onClick={() => navigate("/update/1")}>
-          Update
-        </button>
       </div>
 
       <Routes>
@@ -63,11 +59,6 @@ function App() {
         <Route
           path="/create"
           element={<Create pizzas={pizzas} setPizzas={setPizzas} />}
-        />
-
-        <Route
-          path="/update/:id"
-          element={<Update pizzas={pizzas} setPizzas={setPizzas} />}
         />
       </Routes>
     </>
